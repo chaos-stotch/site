@@ -70,12 +70,38 @@ html
     white-space: nowrap;
     float:left;
     background-color: rgba(0, 0, 0, .75);
+    opacity: 0;
 
     animation: typing;
     animation-duration: 1s;
     animation-timing-function: steps(30, end);
     animation-fill-mode: forwards;
 }
+
+.section3 .sectionText
+{
+    animation-duration: .5s;
+    animation-delay: .5s;
+}
+
+.section4 .sectionText
+{
+    animation-duration: .3s;
+    animation-delay: 1s;
+}
+
+.section5 .sectionText
+{
+    animation-duration: .3s;
+    animation-delay: 1.5s;
+}
+
+.section6 .sectionText
+{
+    animation-duration: .2s;
+    animation-delay: 2s;
+}
+
 
 .section1
 {
@@ -85,6 +111,36 @@ html
 .section2
 {
     bottom: 20%;
+    display: none;
+}
+
+.section3
+{
+    bottom: 30%;
+    display: none;
+}
+
+.section4
+{
+    bottom: 25%;
+    display: none;
+}
+
+.section5
+{
+    bottom: 20%;
+    display: none;
+}
+
+.section6
+{
+    bottom: 15%;
+    display: none;
+}
+
+.section7
+{
+    bottom: 10%;
     display: none;
 }
 
@@ -128,19 +184,25 @@ footer
     transform: translate(-50%, -50%);
 }
 
-@keyframes typing {
-    0% { width: 0 }
+@keyframes typing 
+{
+    0% { width: 0; opacity: 0; }
+    1% { width: 0; opacity: 1; }
     99% {
         width: 100%;
         border-right: 2px solid;
+        opacity: 1;
     }
     100%{
         width: 100%;
         border-right: none;
+        opacity: 1;
     }
 }
 
-@media only screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 1200px) 
+{
     header
     {
         height: 120px;
