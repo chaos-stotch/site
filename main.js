@@ -252,18 +252,18 @@ function section2Animation(reverse)
         phoneMesh.visible = false
         phoneMesh2.visible = false
         phoneMesh3.visible = false
+        phoneMesh.position.set(-5.15, .25, 2);
+        phoneMesh2.position.set(-4.9, .2, 2);
+        phoneMesh3.position.set(-4.65, .15, 2);
         if (computer.scale.x < 1)
         {
             animationConcluded = false
-            computer.scale.x += 0.025
-            computer.scale.y += 0.025
-            computer.scale.z += 0.025
-            computer.position.x -= 0.03
-            computer.position.y += 0.075
-            computer.rotation.y += 0.35
-            phoneMesh.position.x -= .24
-            phoneMesh2.position.x -= .24
-            phoneMesh3.position.x -= .24
+            computer.scale.x += 0.0125
+            computer.scale.y += 0.0125
+            computer.scale.z += 0.0125
+            computer.position.x -= 0.0075
+            computer.position.y += 0.05
+            computer.rotation.y += 0.035
         }else
         {
             actualSection = 2
@@ -303,18 +303,147 @@ function section2Animation(reverse)
         if (computer.scale.x > .5)
         {
             animationConcluded = false
-            computer.scale.x -= 0.0125
-            computer.scale.y -= 0.0125
-            computer.scale.z -= 0.0125
-            computer.position.x += 0.015
-            computer.position.y -= 0.0375
-            computer.rotation.y -= 0.175
-            phoneMesh.position.x += .12
-            phoneMesh2.position.x += .12
-            phoneMesh3.position.x += .12
+            computer.scale.x -= 0.00625
+            computer.scale.y -= 0.00625
+            computer.scale.z -= 0.00625
+            computer.position.x += 0.00375
+            computer.position.y -= 0.025
+            computer.rotation.y -= 0.0175
+            phoneMesh.position.x += .06
+            phoneMesh2.position.x += .06
+            phoneMesh3.position.x += .06
         }else
         {
             actualSection = 3
+            animationConcluded = true
+        }
+    }
+}
+
+function section3Animation(reverse)
+{
+    var computer = scene.getObjectByName( "Sketchfab_Scene" );
+    if (reverse)
+    {
+        //text sections
+        var section3 = document.getElementById("section3")
+        section3.classList.remove('animated');
+        section3.style.display = 'block';
+        var section4 = document.getElementById("section4")
+        section4.classList.remove('animated');
+        section4.style.display = 'block';
+        var section5 = document.getElementById("section5")
+        section5.classList.remove('animated');
+        section5.style.display = 'block';
+        var section6 = document.getElementById("section6")
+        section6.classList.remove('animated');
+        section6.style.display = 'block';
+        var section7 = document.getElementById("section7")
+        section7.classList.remove('animated');
+        section7.style.display = 'block';
+
+        var whatsIcon = document.getElementById("whatsIcon")
+        whatsIcon.classList.remove('animated');
+        whatsIcon.style.display = 'none';
+        var emailIcon = document.getElementById("emailIcon")
+        emailIcon.classList.remove('animated');
+        emailIcon.style.display = 'none';
+        var section8 = document.getElementById("section8")
+        section8.classList.remove('animated');
+        section8.style.display = 'none';
+        var section9 = document.getElementById("section9")
+        section9.classList.remove('animated');
+        section9.style.display = 'none';
+        var section10 = document.getElementById("section10")
+        section10.classList.remove('animated');
+        section10.style.display = 'none';
+        var section11 = document.getElementById("section11")
+        section11.classList.remove('animated');
+        section11.style.display = 'none';
+
+        //animations
+        phoneMesh.visible = true
+        phoneMesh2.visible = true
+        phoneMesh3.visible = true
+        
+        if (computer.scale.x > .5)
+        {
+            animationConcluded = false
+            computer.scale.x -= 0.01
+            computer.scale.y -= 0.01
+            computer.scale.z -= 0.01
+            computer.position.x += 0.01
+            computer.position.y -= 0.003
+            computer.rotation.y += 0.01
+            phoneMesh.position.x += .095
+            phoneMesh2.position.x += .095
+            phoneMesh3.position.x += .095
+            
+        }else
+        {
+            actualSection = 3
+            animationConcluded = true
+        }
+    }
+    else
+    {
+        //text sections
+        var section3 = document.getElementById("section3")
+        section3.classList.remove('animated');
+        section3.style.display = 'none';
+        var section4 = document.getElementById("section4")
+        section4.classList.remove('animated');
+        section4.style.display = 'none';
+        var section5 = document.getElementById("section5")
+        section5.classList.remove('animated');
+        section5.style.display = 'none';
+        var section6 = document.getElementById("section6")
+        section6.classList.remove('animated');
+        section6.style.display = 'none';
+        var section7 = document.getElementById("section7")
+        section7.classList.remove('animated');
+        section7.style.display = 'none';
+
+        var section8 = document.getElementById("section8")
+        section8.classList.remove('animated');
+        section8.style.display = 'block';
+        var section9 = document.getElementById("section9")
+        section9.classList.remove('animated');
+        section9.style.display = 'block';
+        var section10 = document.getElementById("section10")
+        section10.classList.remove('animated');
+        section10.style.display = 'block';
+        var section11 = document.getElementById("section11")
+        section11.classList.remove('animated');
+        section11.style.display = 'block';
+        var whatsIcon = document.getElementById("whatsIcon")
+        whatsIcon.classList.remove('animated');
+        whatsIcon.style.display = 'block';
+        var emailIcon = document.getElementById("emailIcon")
+        emailIcon.classList.remove('animated');
+        emailIcon.style.display = 'block';
+
+        //animations
+        phoneMesh.visible = false
+        phoneMesh2.visible = false
+        phoneMesh3.visible = false
+        phoneMesh.position.set(-5.15, .25, 2);
+        phoneMesh2.position.set(-4.9, .2, 2);
+        phoneMesh3.position.set(-4.65, .15, 2);
+
+        if (computer.scale.x < 1)
+        {
+            animationConcluded = false
+            computer.scale.x += 0.005
+            computer.scale.y += 0.005
+            computer.scale.z += 0.005
+            computer.position.x -= 0.005
+            computer.position.y += 0.0015
+            computer.rotation.y -= 0.005
+
+        }else
+        {
+            actualSection = 4
             animationConcluded = true
         }
     }
@@ -402,6 +531,11 @@ function renderScene() {
             {
                 section2Animation(false)
             }
+            else if(actualSection == 3)
+            {
+                section3Animation(false)
+            }
+
         }else
         {
             if (actualSection == 2)
@@ -411,6 +545,10 @@ function renderScene() {
             else if (actualSection == 3)
             {
                 section2Animation(true)
+            }
+            else if (actualSection == 4)
+            {
+                section3Animation(true)
             }
             
         }
