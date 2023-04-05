@@ -5,6 +5,11 @@
     font-family: 'Cabin', sans-serif;
 }
 
+html
+{
+    overflow: hidden;
+}
+
 .splashScreen
 {
     position: absolute;
