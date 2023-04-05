@@ -210,7 +210,10 @@ var initialSettings = false
 function renderScene() {
     requestAnimationFrame( renderScene );
     renderer.render( scene, camera );
-
+    if (splash_opacity >.9)
+    {
+        return
+    }
     var computer = scene.getObjectByName( "Sketchfab_Scene" );
 
     if (!initialSettings)
@@ -223,12 +226,8 @@ function renderScene() {
     rotationUpAnimation();
     
     upAndDownAnimation();
-    if (splash_opacity >0)
-    {
-        return
-    }
+    
 
-    console.log(actualSection)
     if (scroll_command != "no command")
     {
         if (scroll_command == "down")
