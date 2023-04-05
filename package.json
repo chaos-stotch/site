@@ -1,5 +1,4 @@
 {
-  "homepage": "https://chaos-stotch.github.io/site/",
   "scripts": {
     "build": "vite build",
     "deploy": "gh-pages -d dist"
