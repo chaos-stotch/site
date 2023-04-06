@@ -14,6 +14,12 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setClearColor( 0x000, 0);
 document.body.appendChild( renderer.domElement );
 
+window.addEventListener( 'resize', onWindowResize );
+
+function onWindowResize() {
+    renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
 camera.position.z = 5;
 
 const loader = new GLTFLoader();
